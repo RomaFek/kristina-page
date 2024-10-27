@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "http-server dist/your-app-name -p 8080",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
