@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve", // Этот скрипт не подходит для продакшн
+    "start": "ng serve",
     "build": "ng build",
-    "serve": "serve -s dist/kristina-page", // Добавьте эту строку
+    "serve": "serve -s dist/kristina-page",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "rxjs": "~7.5.0",
+    "serve": "^14.2.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
