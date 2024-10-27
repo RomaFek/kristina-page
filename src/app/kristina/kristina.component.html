@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- Титул -->
+  <h1>Интернет страничка самой прекрасной девушки на свете!</h1>
+
+  <!-- Фото слева и текст о любви справа -->
+  <div class="top-section">
+    <img class="photo" src="assets/photo_2024-10-27 19.14.49.jpeg" alt="Kristina" />
+    <div class="text">
+      <p>Моя дорогая Кристина, я создал эту страницу, чтобы каждый смог хотя бы немного понять, насколько ты необыкновенна и прекрасна.
+        Этот проект — лишь скромная попытка выразить, как много ты для меня значишь.
+        Я мечтал передать через него каждую искру моей любви, чтобы ты, читая эти строки, почувствовала, как сильно бьется мое сердце ради тебя.
+        Ты — мой свет, моя опора, моя вдохновляющая муза. Ты наполняешь мой мир смыслом, и ради твоей улыбки я готов на всё.
+        Ты для меня — целый мир, и если бы мне пришлось отдать за тебя свою жизнь, я бы сделал это, не раздумывая.
+        Я люблю тебя бесконечно, и каждый миг, проведенный рядом с тобой, для меня бесценен.
+      </p>
+    </div>
+  </div>
+
+  <!-- Боковые кнопки с интересными фактами -->
+  <div class="facts-photo-section">
+    <div class="facts-section">
+      <div class="facts-semi-section">
+        <button class="fact" *ngFor="let fact of facts" (click)="openModal(fact)" aria-haspopup="dialog">{{ fact.label }}</button>
+      </div>
+      <img class="photo2" src="assets/photo_2024-10-27 19.14.52.jpeg" alt="Kristina" />
+    </div>
+  </div>
+
+  <!-- Модальное окно -->
+  <div class="modal" *ngIf="isModalOpen" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <p>{{ selectedFact }}</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <button (click)="showMessage()">Пытаюсь оправдаться</button>
+  </div>
+    <p *ngIf="message" class="message">{{ message }}</p>
+</div>
