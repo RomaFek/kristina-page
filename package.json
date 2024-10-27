@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve", // Этот скрипт не подходит для продакшн
     "build": "ng build",
+    "serve": "serve -s dist/kristina-page", // Добавьте эту строку
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
